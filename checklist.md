@@ -1,6 +1,6 @@
 # Checklist
 
-Before you submit the final version of your labs, make sure that your project fulfils all of the tasks mentioned below.
+Before you submit the final version of your labs, make sure that your project fulfills all of the tasks mentioned below.
 
 ## 00 Introduction
 
@@ -8,7 +8,7 @@ Before you submit the final version of your labs, make sure that your project fu
 
 ## 01 Git
 
-- [X] Fork and clone the 1md034_students repository
+- [ ] Fork and clone the 1md034_students repository
 
 ## 02 HTML
 
