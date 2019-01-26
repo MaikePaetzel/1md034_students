@@ -2,7 +2,83 @@
 body {
 	font-family: monospace;
 	font-size: 1.2em;
+	background-image: url(https://i.pinimg.com/originals/8b/8f/82/8b8f82f3b4a9d9d091a7ef7a3ccf8595.jpg);
 }
+button:hover {
+	background-color: #62847c;
+}
+
+button {
+	margin-bottom: 2%;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+}
+.toplefttext{
+	margin-left: 2%;
+}
+.spacemenu{
+	background-color: #101928;
+	color: 	#c3cedb;
+	margin-top: 1%;
+	border: 2px solid #a15f60;
+}
+.spaceinformation{
+	background-color: #101928;
+	color: 	#c3cedb;
+	margin-top: 1%;
+	border: 2px solid #a15f60;
+}
+.subspaceinfo{
+	margin-left: 2%;
+}
+.cursor {
+	cursor: url(http://cur.cursors-4u.net/nature/nat-10/nat927.ani), url(http://cur.cursors-4u.net/nature/nat-10/nat927.png), auto !important;
+}
+.container{
+	height: 300px;
+	overflow: hidden;
+}
+.container p{
+	color: #62847c;
+	position: absolute;
+	font-size: 40px;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.container img{
+	margin-top: 1%;
+	height: auto;
+	width: 100%;
+	opacity: 1;
+}
+.wrapper {
+	display: grid;
+	grid-template-columns: auto auto auto;
+
+}
+.box {
+	border-radius: 5px;
+	padding: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
+}
+.a {
+	grid-column: 1 ;
+}
+
+.b {
+	grid-column: 2 ;
+}
+
+.c {
+	grid-column: 3 ;
+}
+
 .view-box {
 	width: 90%;
 	height: 50vh;
