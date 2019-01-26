@@ -8,7 +8,7 @@ var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var path = require('path');
- 
+app.use('/public', express.static('public'));
 // Pick arbitrary port for server
 var port = 3000;
 app.set('port', (process.env.PORT || port));
