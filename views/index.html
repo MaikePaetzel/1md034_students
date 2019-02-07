@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
 <head>
     <link rel="stylesheet" type="text/css" href="../public/css/deli-very.css">
     <title>Page title shown in window title</title>
@@ -15,35 +15,56 @@
         <h2 class="toplefttext">SPACEMENU</h2>
         <p class="toplefttext">You choose your burger like that</p>
 
-        <div class="wrapper">
-
+        <div id="list" class="wrapper">
             <div class="box a">
-                <p>Galaxy Cat Riding a Hamburger</p>
-                <img src="https://i2.wp.com/deulings.com/wp-content/uploads/htd1004_thumbnail_2.png?resize=300%2C300&ssl=1" width="200">
+
+                <input type="radio" id="one" value="Galaxy Cat Riding a Hamburger" v-model="picked">
+                <div class="burgername">{{ burgers[0].burger.name }}</div>
+                <img :src="burgers[0].burger.img" width="200">
                 <ul>
-                    <li>Cat + Burger + Space = Awesome</li>
-                    <li>Space cat. What else?</li>
-                    <li>Omg cats in space!!!</li>
+                    <li>
+                        {{ burgers[0].burger.kCal }}
+                    </li>
+                    <li v-if="burgers[0].burger.lactose === true">
+                        <p>Contains <b>lactose</b> </p>
+                    </li>
+                    <li v-if="burgers[0].burger.gluten === true">
+                        <p>Contains <b>gluten</b> </p>
+                    </li>
                 </ul>
             </div>
 
             <div class="box b">
-                <p>Double Cheese, from Space</p>
-                <img src="https://cdn.vox-cdn.com/thumbor/kTolCGbOOg6GtjY8M3OS8OIZiuQ=/0x0:820x615/1400x1400/filters:focal(0x0:820x615):format(png)/cdn.vox-cdn.com/uploads/chorus_image/image/47373966/Pasted_image_at_2015_10_09_12_28_PM.0.0.png" width="200">
+                <input type="radio" id="two" value="Double Cheese, from Space" v-model="picked">
+                <div class="burgername">{{ burgers[1].burger.name }}</div>
+                <img :src="burgers[1].burger.img" width="200">
                 <ul>
-                    <li>Made with love, from space</li>
-                    <li>Comes with extra cheese, from space</li>
-                    <li>It's from space</li>
+                    <li>
+                        {{ burgers[1].burger.kCal }}
+                    </li>
+                    <li v-if="burgers[1].burger.lactose === true">
+                        <p>Contains <b>lactose</b> </p>
+                    </li>
+                    <li v-if="burgers[1].burger.gluten === true">
+                        <p>Contains <b>gluten</b> </p>
+                    </li>
                 </ul>
             </div>
 
             <div class="box c">
-                <p>Shapeshifting Burger</p>
-                <img src="https://data.whicdn.com/images/44936822/original.gif" width="200">
+                <input type="radio" id="three" value="Shapeshifting Burger" v-model="picked">
+                <div class="burgername">{{ burgers[2].burger.name }}</div>
+                <img :src="burgers[2].burger.img" width="200">
                 <ul>
-                    <li>Feeling kinda spaced out</li>
-                    <li>Better than the ones at Burger King</li>
-                    <li>I ran out of ideas, What's up?? </li>
+                    <li>
+                        {{ burgers[2].burger.kCal }}
+                    </li>
+                    <li v-if="burgers[2].burger.lactose === true">
+                        <p>Contains <b>lactose</b> </p>
+                    </li>
+                    <li v-if="burgers[2].burger.gluten === true">
+                        <p>Contains <b>gluten</b> </p>
+                    </li>
                 </ul>
             </div>
 
@@ -56,30 +77,30 @@
         <h2>SPACE CUSTOMER INFORMATION</h2>
         <p>You can provide us with your information, from space, here</p>
         <h3>SPACE DELIVERY INFORMATION:</h3>
-
+            <div id="orders">
         <p>
             <label for="firstandlastname">Space Cadets Full Name</label><br>
-            <input type="text" id="firstandlastname" name="faln" required="required" placeholder="First- and Last name">
+            <input v-model="faln" id="firstandlastname" required="required" placeholder="First- and Last name">
         </p>
 
         <p>
             <label for="email">S-mail</label><br>
-            <input type="email" id="email" name="em" required="required" placeholder="S-mail address">
+            <input v-model="Email" type="email" id="email" name="em" required="required" placeholder="S-mail address">
         </p>
 
         <p>
             <label for="planet">Planet</label><br>
-            <input type="text" id="planet" name="pn" required="required" placeholder="Planet name">
+            <input v-model="Planet" type="text" id="planet" name="pn" required="required" placeholder="Planet name">
         </p>
 
         <p>
             <label for="street">Street</label><br>
-            <input type="number" id="street" name="s" required="required" placeholder="Space street number">
+            <input v-model="Street" type="number" id="street" name="s" required="required" placeholder="Space street number">
         </p>
 
         <p>
             <label for="recipient">Payment option</label><br>
-            <select id="recipient" name="rcp">
+            <select v-model="Selected" id="recipient" name="rcp">
                 <option>Spaceförsäkringar</option>
                 <option>Intergalactic deposits</option>
                 <option>Spacebank</option>
@@ -90,27 +111,32 @@
         <p>SpaceGender:</p>
 
         <p>
-            <input type="radio" id="spacemale" name="spaceoption" value="spacemale"
+            <input v-model="Picked" type="radio" id="spacemale" name="spaceoption" value="spacemale"
                    checked>
             <label for="spacemale">SpaceMale</label>
         </p>
         <p>
-            <input type="radio" id="spacefemale" name="spaceoption" value="spacefemale">
+            <input v-model="Picked" type="radio" id="spacefemale" name="spaceoption" value="spacefemale">
             <label for="spacefemale">SpaceFemale</label>
         </p>
         <p>
-            <input type="radio" id="spacemonkey" name="spaceoption" value="spacemonkey">
+            <input v-model="Picked" type="radio" id="spacemonkey" name="spaceoption" value="spacemonkey">
             <label for="spacemonkey">SpaceMonkey</label>
         </p>
-
-        <button type="submit" class="cursor" ><img src="https://www.wpclipart.com/computer/keyboard_keys/smaller_keys/large_keys/computer_key_Space_bar.png" width="250" height="50"> </button>
+        <button v-on:click="markDone(key)" type="submit" class="cursor" ><img src="https://www.wpclipart.com/computer/keyboard_keys/smaller_keys/large_keys/computer_key_Space_bar.png" width="250" height="50"></button>
+                <br><span>Selected: {{ faln + " " + Email + " " + Planet + " " + Street + " " + Selected + " " + Picked}}</span>
+        </div>
         </section>
     </section>
 
 </main>
 <footer>
     <hr>
-    <p>© 2019 Space Burgers Inc.</p>
+    <p style="color:#c3cedb">© 2019 Space Burgers Inc.</p>
 </footer>
 </body>
+<script type="text/javascript" src="../public/js/menu.js"></script>
+<script src="https://vuejs.org/js/vue.js"></script>
+<script src="../public/js/js_script.js"></script>
+<script src="../public/js/vue_script.js"></script>
 </html>

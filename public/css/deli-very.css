@@ -58,7 +58,11 @@ table {
 .wrapper {
 	display: grid;
 	grid-template-columns: auto auto auto;
-
+}
+.wrapper img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 .box {
 	border-radius: 5px;
@@ -66,6 +70,9 @@ table {
 	margin-left: auto;
 	margin-right: auto;
 	width: auto;
+}
+.burgername{
+	text-align: center;
 }
 .a {
 	grid-column: 1 ;
