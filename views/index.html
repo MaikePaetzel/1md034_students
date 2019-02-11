@@ -18,7 +18,7 @@
         <div id="list" class="wrapper">
             <div class="box a">
 
-                <input type="radio" id="one" value="Galaxy Cat Riding a Hamburger" v-model="picked">
+                <input type="checkbox" id="one" v-bind:value="burgers[0].burger.name" v-model="checkedNames">
                 <div class="burgername">{{ burgers[0].burger.name }}</div>
                 <img :src="burgers[0].burger.img" width="200">
                 <ul>
@@ -35,7 +35,7 @@
             </div>
 
             <div class="box b">
-                <input type="radio" id="two" value="Double Cheese, from Space" v-model="picked">
+                <input type="checkbox" id="two" v-bind:value="burgers[1].burger.name" v-model="checkedNames">
                 <div class="burgername">{{ burgers[1].burger.name }}</div>
                 <img :src="burgers[1].burger.img" width="200">
                 <ul>
@@ -52,7 +52,7 @@
             </div>
 
             <div class="box c">
-                <input type="radio" id="three" value="Shapeshifting Burger" v-model="picked">
+                <input type="checkbox" id="three" v-bind:value="burgers[2].burger.name" v-model="checkedNames">
                 <div class="burgername">{{ burgers[2].burger.name }}</div>
                 <img :src="burgers[2].burger.img" width="200">
                 <ul>
@@ -66,6 +66,7 @@
                         <p>Contains <b>gluten</b> </p>
                     </li>
                 </ul>
+                <span>Checked names: {{ checkedNames }}</span>
             </div>
 
         </div>
@@ -124,8 +125,8 @@
             <label for="spacemonkey">SpaceMonkey</label>
         </p>
         <button v-on:click="markDone(key)" type="submit" class="cursor" ><img src="https://www.wpclipart.com/computer/keyboard_keys/smaller_keys/large_keys/computer_key_Space_bar.png" width="250" height="50"></button>
-                <br><span>Selected: {{ faln + " " + Email + " " + Planet + " " + Street + " " + Selected + " " + Picked}}</span>
-        </div>
+                <br><span>Selected: {{ faln + " " + Email + " " + Planet + " " + Street + " " + Selected + " " + Picked + " " + printBurger}}</span>
+            </div>
         </section>
     </section>
 
