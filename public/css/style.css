@@ -10,3 +10,49 @@ body {
     font-weight: bold;
 }
 
+.burgers {
+    background-color: black;
+    color: white;
+    text-align:center;
+}
+
+.customerinfo {
+    font-size: 60px;
+    
+}
+
+.burgertable {
+
+}
+
+#payment {
+    font-size: 60px;
+}
+
+#gender {
+    font-size: 60px;
+}
+
+#email {
+    font-size: 60px;
+}
+
+#street {
+    font-size: 60px;
+}
+
+#house {
+    font-size: 60px;
+}
+
+#fullname {
+    font-size: 60px;
+}
+
+#placeorder {
+    font-size:60px;
+}
+
+input {
+    font-size:80px;
+}
