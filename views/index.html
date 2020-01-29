@@ -9,15 +9,15 @@
     <main>
       <h1 style="font-size:100px;">Welcome to BurgerHeaven Online</h1>
       
-      <section>
-	<h2 style="font-size:60px;">Select burger</h2>
-	<p style="font-size:50px;">This is where you execute burger selection</p>
+      <section class = "burgers">
+	<h2 >Select burger</h2>
+	<p>This is where you execute burger selection</p>
 	<table>
 	  <thead>
 	    <tr>
-	      <th style="font-size:60px;">The Fire Burger </th>
-	      <th style="font-size:60px;">Fried Turkey Burger </th>
-	      <th style="font-size:60px;">A Double w/ Cheese </th>
+	      <th>The Fire Burger </th>
+	      <th>Fried Turkey Burger </th>
+	      <th>A Double w/ Cheese </th>
 	    </tr>
 	  </thead>
 	  <tbody>
@@ -29,24 +29,24 @@
 
 	    <tr>
 	      <td>
-		<ul style = "font-size: 50px;">
+		<ul>
 		  <li> 750 kCal</li>
-		  <li> Contains lactose </li>
-		  <li> Contains gluten </li>
+		  <li> Contains <span class="allergy">lactose</span> </li>
+		  <li> Contains <span class="allergy">gluten</span> </li>
 		</ul>
 	      </td>
 	      <td>
-		<ul style = "font-size: 50px;">
+		<ul>
 		  <li> Deep fired Turkish turkey</li>
-		  <li> A slice of pink stuff (contains lactose)</li>
+		  <li> A slice of pink stuff (contains <span class="allergy">lactose</span>)</li>
 		  <li> Shake n-bake gluten-free bread</li>
 		</ul>
 	      </td>
 	      <td>
-		<ul style = "font-size: 50px;">
+		<ul>
 		  <li> Two layers of pure meat</li>
-		  <li> Lots of yummy cheese (contains lactose) </li>
-		  <li> Sweet bread bun (contains gluten) </li>
+		  <li> Lots of yummy cheese (contains <span class="allergy">lactose</span>) </li>
+		  <li> Sweet bread bun (contains <span class="allergy">gluten</span>) </li>
 		</ul>
 	      </td>
 	    </tr>
@@ -55,49 +55,49 @@
 	</table>
       </section>
       
-      <section>
-	<h2 style="font-size:60px;">Customer information</h2>
-	<p style="font-size:50px;">This is where you provide necessary information.</p>
-	<h3 style="font-size:60px;">Delivery information</h3>
-	<p style="font-size:50px;">
+      <section class = "customerinfo">
+	<h2>Customer information</h2>
+	<p>This is where you provide necessary information.</p>
+	<h3>Delivery information</h3>
+	<p>
 	  <label for="fullname">Full Name</label><br>
-	  <input style="font-size:50px;" type="text" id="fullname" name="fn" required="required" placeholder="First- and Last name" />
+	  <input type="text" id="fullname" name="fn" required="required" placeholder="First- and Last name" />
 	</p>
-	<p style="font-size:50px;">
+	<p >
 	  <label for = "email">E-mail</label><br>
-	  <input style="font-size:50px;" type="email" id="email" name="em" required="required" placeholder="E-mail address" />
+	  <input type="email" id="email" name="em" required="required" placeholder="E-mail address" />
 	</p>
 	
-	<p style="font-size:50px;">
+	<p>
 	  <label for="street">Street</label><br>
-	  <input style="font-size:50px;" type="text" id="street" name="s" placeholder="Street name" />
+	  <input type="text" id="street" name="s" placeholder="Street name" />
 	</p>
-	<p style="font-size:50px;">
+	<p>
 	  <label for="house">House</label><br>
-	  <input style="font-size:50px;" type="number" id="house" name="h" placeholder="House number" />
+	  <input type="number" id="house" name="h" placeholder="House number" />
 	</p>
-	<p style="font-size:50px;">
+	<p>
 	  <label for="payment">Payment methods</label><br />
-	  <select style="font-size:50px;" id="payment" name="p">
-            <option style="font-size:50px;">Credit card</option>
-            <option style="font-size:50px;">American Express</option>
-            <option style="font-size:50px;">Cash at delivery</option>
-            <option style="font-size:50px;">PayPal</option>
+	  <select id="payment" name="p">
+            <option>Credit card</option>
+            <option>American Express</option>
+            <option>Cash at delivery</option>
+            <option>PayPal</option>
           </select>
-	<p style="font-size:50px;">
+	<p>
 	  <label for="gender">Gender</label><br>
-	  <input style="font-size:50px;" type="radio" id="gender" name="gender"  /> Male<br>
-	  <input style="font-size:50px;" type="radio" id="gender" name="gender"  /> Female<br>
-	  <input style="font-size:50px;" type="radio" id="gender" name="gender"  /> Non-binary<br>
-	  <input style="font-size:50px;" type="radio" id="gender" name="gender" checked = "checked" /> Undisclosed<br>
+	  <input type="radio" id="gender" name="gender"  /> Male<br>
+	  <input type="radio" id="gender" name="gender"  /> Female<br>
+	  <input type="radio" id="gender" name="gender"  /> Non-binary<br>
+	  <input type="radio" id="gender" name="gender" checked = "checked" /> Undisclosed<br>
 	</p>
 	
       </section>
-      <input style="font-size:70px;"  type="submit" value="Place order" />
+      <input type="submit" value="Place order" />
     </main>
     <footer>
       <HR>
-      <p style = "font-size:50px;">2020 Hypothetical Burgers Inc.</p>
+      <p>2020 Hypothetical Burgers Inc.</p>
     </footer>
   </body>
 </html>
