@@ -7,7 +7,7 @@
   </head>
   <body>
     <main>
-      <h1 style="font-size:100px;">Welcome to BurgerHeaven Online</h1>
+      <h1>Welcome to BurgerHeaven Online</h1>
       
       <section class="burgers">
 	<h2 >Select burger</h2>
@@ -22,12 +22,12 @@
 	  </thead>
 	  <tbody>
 	    <tr>
-	      <td><img src="https://image.shutterstock.com/image-photo/closeup-home-made-tasty-burger-600w-1291051606.jpg" height="800" width="1000"></td>
-	      <td><img src="https://assets.epicurious.com/photos/5748b2ed5a5fbbae31ae4af9/6:4/w_620%2Ch_413/shutterstock_148839410.jpg" height="800" width="1000"></td>
-	      <td><img src="https://images.eatthismuch.com/site_media/img/331330_dylpill21_acbc0262-ff8f-4a8e-b6d0-25486109a502.png" height="800" width="1000"></td>
+	      <td><img class="pictures" src="https://image.shutterstock.com/image-photo/closeup-home-made-tasty-burger-600w-1291051606.jpg"</td>
+	      <td><img class="pictures" src="https://assets.epicurious.com/photos/5748b2ed5a5fbbae31ae4af9/6:4/w_620%2Ch_413/shutterstock_148839410.jpg"</td>
+	      <td><img class="pictures" src="https://images.eatthismuch.com/site_media/img/331330_dylpill21_acbc0262-ff8f-4a8e-b6d0-25486109a502.png"</td>
 	    </tr>
 
-	    <tr>
+	    <tr class="list">
 	      <td>
 		<ul>
 		  <li> 750 kCal</li>
@@ -59,23 +59,25 @@
 	<h2>Customer information</h2>
 	<p>This is where you provide necessary information.</p>
 	<h3>Delivery information</h3>
-	<p>
-	  <label for="fullname">Full Name</label><br>
-	  <input type="text" id="fullname" name="fn" required="required" placeholder="First- and Last name" />
+	<div class="info">
+	  <p>
+	    <label for="fullname">Full Name</label><br>
+	    <input type="text" id="fullname" name="fn" required="required" placeholder="First- and Last name" />
+	  </p>
+	  <p >
+	    <label for="email">E-mail</label><br>
+	    <input type="email" id="email" name="em" required="required" placeholder="E-mail address" />
+	  </p>
+	  
+	  <p>
+	    <label for="street">Street</label><br>
+	    <input type="text" id="street" name="s" placeholder="Street name" />
 	</p>
-	<p >
-	  <label for="email">E-mail</label><br>
-	  <input type="email" id="email" name="em" required="required" placeholder="E-mail address" />
-	</p>
-	
-	<p>
-	  <label for="street">Street</label><br>
-	  <input type="text" id="street" name="s" placeholder="Street name" />
-	</p>
-	<p>
-	  <label for="house">House</label><br>
-	  <input type="number" id="house" name="h" placeholder="House number" />
-	</p>
+	  <p>
+	    <label for="house">House</label><br>
+	    <input type="number" id="house" name="h" placeholder="House number" />
+	  </p>
+	  </div>
 	<p>
 	  <label for="payment">Payment methods</label><br />
 	  <select id="payment" name="p">
@@ -84,7 +86,7 @@
             <option>Cash at delivery</option>
             <option>PayPal</option>
           </select>
-	<p>
+	<p><br>
 	  <label for="gender">Gender</label><br>
 	  <input type="radio" id="gender" name="gender"  /> Male<br>
 	  <input type="radio" id="gender" name="gender"  /> Female<br>

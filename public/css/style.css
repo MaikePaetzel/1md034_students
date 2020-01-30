@@ -4,8 +4,16 @@
 body {
     font-size: 60px;
     font-family: arial;
+    text-align:center;
 }
 
+h1 {
+    font-size:100px;
+
+}
+
+
+ /* BURGER SELECTION */
 .allergy {
     font-weight: bold;
 }
@@ -14,15 +22,30 @@ body {
     background-color: black;
     color: white;
     text-align:center;
+    border: 100px;
 }
+
+.burgertable {
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.pictures {
+    width: 35vh;
+    height: 25vh;
+}
+
+.list {
+    text-align: left;
+}
+
+
+
+/* CUSTOMER INFORMATION */
 
 .customerinfo {
     font-size: 60px;
     
-}
-
-.burgertable {
-
 }
 
 #payment {
@@ -49,9 +72,12 @@ body {
     font-size: 60px;
 }
 
+
+
+/* BUTTONS*/
+
 #placebutton {
     font-size:60px;
-    
 }
 
 button:hover {
