@@ -49,10 +49,12 @@ body {
     font-size: 60px;
 }
 
-#placeorder {
+#placebutton {
     font-size:60px;
+    
 }
 
-input {
-    font-size:80px;
+button:hover {
+    cursor:pointer;
+    color: green;
 }
