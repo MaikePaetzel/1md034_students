@@ -17,11 +17,21 @@ section {
 
 .header {
     margin: 5vh 12vw;
+    height: 250px;
+    overflow: hidden;
 }
 
 .header > img {
-    width: 74.5vw;
+    width: 100%;
+    height: auto;
     opacity: 50;
+}
+
+.header > h1 {
+    font-size: 70px;
+    top: 6vh;
+    left: 30vh;
+    position: absolute;
 }
 
 
